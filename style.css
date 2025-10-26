@@ -16,9 +16,35 @@ body {
 
 /* =============== Header =============== */
 .header {
-  text-align: center;
-  padding: 3rem 1rem 2rem;
   background: linear-gradient(135deg, #0d0d0d, #1b1b1b);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #222;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.header-text {
+  text-align: center;
+  flex: 1;
 }
 
 .site-title {
@@ -30,12 +56,10 @@ body {
 }
 
 .site-subtitle {
-  margin-top: 0.5rem;
-  font-size: 1.1rem;
+  margin-top: 0.3rem;
+  font-size: 1rem;
   color: #ccc;
-  font-weight: 400;
 }
-
 /* =============== Main Gallery =============== */
 .main-content {
   flex: 1;
@@ -294,3 +318,4 @@ body {
     font-size: 1.1rem;
   }
 }
+

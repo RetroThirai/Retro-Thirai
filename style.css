@@ -301,6 +301,11 @@ body {
 
 /* =============== Responsive =============== */
 @media (max-width: 768px) {
+  .logo {
+    height: 40px;
+    width: auto;
+  }
+
   .site-title {
     font-size: 2rem;
   }
@@ -318,4 +323,6 @@ body {
     font-size: 1.1rem;
   }
 }
+
+
 

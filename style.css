@@ -14,52 +14,57 @@ body {
   flex-direction: column;
 }
 
-/* =============== Header =============== */
+/* =============== Header (responsive, grid-based) =============== */
 .header {
   background: linear-gradient(135deg, #0d0d0d, #1b1b1b);
-  padding: 1.5rem 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 1rem 1rem;
   border-bottom: 1px solid #222;
+  display: flex;
+  justify-content: center; /* centers inner content horizontally */
 }
 
 .header-inner {
-  display: flex;
+  /* Use grid so we have left (logo), center (text), right (spacer) cells */
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: center;
   gap: 1rem;
   max-width: 1200px;
   width: 100%;
-  position: relative;
+  padding: 0 1rem;
 }
 
+/* Logo sits in the left grid cell — no absolute positioning */
 .logo {
-  position: absolute;
-  left: 0;
-  height: 50px;
+  height: 56px;      /* desktop default */
   width: auto;
+  display: block;
   object-fit: contain;
 }
 
+/* header-text is centered because grid middle column is 1fr and text-align center */
 .header-text {
   text-align: center;
-  flex: 1;
+  justify-self: center;
 }
 
+/* Title / subtitle styling */
 .site-title {
   font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #ffcc00;
+  margin: 0;
 }
 
 .site-subtitle {
-  margin-top: 0.3rem;
+  margin-top: 0.25rem;
   font-size: 1rem;
   color: #ccc;
+  margin: 0;
 }
+
 /* =============== Main Gallery =============== */
 .main-content {
   flex: 1;
@@ -307,7 +312,11 @@ body {
   }
 
   .site-title {
-    font-size: 2rem;
+    font-size: 1.6rem; /* smaller on mobile */
+  }
+
+  .site-subtitle {
+    font-size: 0.85rem;
   }
 
   .gallery {
@@ -322,7 +331,18 @@ body {
   .lightbox-title {
     font-size: 1.1rem;
   }
+
+  /* Reduce header padding to give more horizontal space on small screens */
+  .header {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .header-inner {
+    padding: 0 0.5rem;
+    gap: 0.5rem;
+  }
 }
+
 
 
 
